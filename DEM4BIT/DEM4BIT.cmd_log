@@ -1,0 +1,50 @@
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+bitgen -intstyle ise -f DEM4BIT.ut DEM4BIT.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+bitgen -intstyle ise -f DEM4BIT.ut DEM4BIT.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+bitgen -intstyle ise -f DEM4BIT.ut DEM4BIT.ncd 
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+bitgen -intstyle ise -f DEM4BIT.ut DEM4BIT.ncd 
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+bitgen -intstyle ise -f DEM4BIT.ut DEM4BIT.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+xst -intstyle ise -ifn "D:/FPGA/DEM4BIT/DEM4BIT.xst" -ofn "D:/FPGA/DEM4BIT/DEM4BIT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4 DEM4BIT.ngc DEM4BIT.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o DEM4BIT_map.ncd DEM4BIT.ngd DEM4BIT.pcf 
+par -w -intstyle ise -ol high -t 1 DEM4BIT_map.ncd DEM4BIT.ncd DEM4BIT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DEM4BIT.twx DEM4BIT.ncd -o DEM4BIT.twr DEM4BIT.pcf -ucf DEM4BIT.ucf 
+bitgen -intstyle ise -f DEM4BIT.ut DEM4BIT.ncd 

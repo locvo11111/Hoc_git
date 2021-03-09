@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Oct 02 10:48:01 2020
+# Process ID: 15416
+# Log file: D:/FPGA/AND/planAhead_run_1/planAhead.log
+# Journal file: D:/FPGA/AND/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/FPGA/AND/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P70 [get_ports a]
+endgroup
+set_property package_pin "" [get_ports [list  cin]]
+startgroup
+set_property package_pin P69 [get_ports b]
+endgroup
+startgroup
+set_property package_pin P68 [get_ports cin]
+endgroup
+startgroup
+set_property package_pin P47 [get_ports count]
+endgroup
+startgroup
+set_property package_pin P46 [get_ports s]
+endgroup
+set_property iostandard LVTTL [get_ports [list a]]
+set_property iostandard LVTTL [get_ports [list b]]
+set_property iostandard LVTTL [get_ports [list cin]]
+set_property pulltype PULLUP [get_ports [list a]]
+set_property pulltype PULLUP [get_ports [list b]]
+set_property pulltype PULLUP [get_ports [list cin]]
+set_property drive 8 [get_ports [list count]]
+set_property drive 8 [get_ports [list s]]
+save_constraints

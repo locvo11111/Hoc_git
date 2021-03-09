@@ -1,0 +1,48 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\XIOLIN\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc DEM4BIT.ucf -p xc3s50a-tq144-4
+DEM4BIT.ngc DEM4BIT.ngd
+
+Reading NGO file "D:/FPGA/DEM4BIT/DEM4BIT.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "DEM4BIT.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:137 - Constraint <NET "CKHT" TNM_NET=clk;>
+   [DEM4BIT.ucf(19)]: No appropriate instances for the TNM constraint are driven
+   by "CKHT".
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_CKHT= PERIOD "CKHT" 12 MHZ
+   HIGH 50%;> [DEM4BIT.ucf(20)]: Unable to find an active 'TNM' or 'TimeGrp'
+   constraint named 'CKHT'.
+
+WARNING:ConstraintSystem:194 - The TNM 'clk', does not directly or indirectly
+   drive any flip-flops, latches and/or RAMs and is not actively used by any
+   referencing constraint.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   3
+
+Total memory usage is 4397240 kilobytes
+
+Writing NGD file "DEM4BIT.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "DEM4BIT.bld"...

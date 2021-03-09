@@ -1,0 +1,3 @@
+vhdl work "DEM4BITS.vhd"
+vhdl work "CHIAENABLE1HZ.vhd"
+vhdl work "DEM4BIT.vhd"

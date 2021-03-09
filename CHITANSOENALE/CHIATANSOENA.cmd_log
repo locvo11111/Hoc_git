@@ -1,0 +1,19 @@
+xst -intstyle ise -ifn "D:/FPGA/CHITANSOENALE/CHIATANSOENA.xst" -ofn "D:/FPGA/CHITANSOENALE/CHIATANSOENA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-4 CHIATANSOENA.ngc CHIATANSOENA.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIATANSOENA_map.ncd CHIATANSOENA.ngd CHIATANSOENA.pcf 
+xst -intstyle ise -ifn "D:/FPGA/CHITANSOENALE/CHIATANSOENA.xst" -ofn "D:/FPGA/CHITANSOENALE/CHIATANSOENA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-4 CHIATANSOENA.ngc CHIATANSOENA.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIATANSOENA_map.ncd CHIATANSOENA.ngd CHIATANSOENA.pcf 
+par -w -intstyle ise -ol high -t 1 CHIATANSOENA_map.ncd CHIATANSOENA.ncd CHIATANSOENA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CHIATANSOENA.twx CHIATANSOENA.ncd -o CHIATANSOENA.twr CHIATANSOENA.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIATANSOENA.ucf -p xc3s50a-tq144-4 CHIATANSOENA.ngc CHIATANSOENA.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIATANSOENA_map.ncd CHIATANSOENA.ngd CHIATANSOENA.pcf 
+par -w -intstyle ise -ol high -t 1 CHIATANSOENA_map.ncd CHIATANSOENA.ncd CHIATANSOENA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CHIATANSOENA.twx CHIATANSOENA.ncd -o CHIATANSOENA.twr CHIATANSOENA.pcf -ucf CHIATANSOENA.ucf 
+bitgen -intstyle ise -f CHIATANSOENA.ut CHIATANSOENA.ncd 
+xst -intstyle ise -ifn "D:/FPGA/CHITANSOENALE/CHIATANSOENA.xst" -ofn "D:/FPGA/CHITANSOENALE/CHIATANSOENA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIATANSOENA.ucf -p xc3s50a-tq144-4 CHIATANSOENA.ngc CHIATANSOENA.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIATANSOENA_map.ncd CHIATANSOENA.ngd CHIATANSOENA.pcf 
+par -w -intstyle ise -ol high -t 1 CHIATANSOENA_map.ncd CHIATANSOENA.ncd CHIATANSOENA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CHIATANSOENA.twx CHIATANSOENA.ncd -o CHIATANSOENA.twr CHIATANSOENA.pcf -ucf CHIATANSOENA.ucf 
+bitgen -intstyle ise -f CHIATANSOENA.ut CHIATANSOENA.ncd 

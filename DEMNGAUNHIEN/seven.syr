@@ -1,0 +1,456 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: seven.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "seven.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "seven"
+Output Format                      : NGC
+Target Device                      : xc3s50a-4-tq144
+
+---- Source Options
+Top Module Name                    : seven
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/FPGA/DEMNGAUNHIEN/DEMNGANHIEN.vhd" in Library work.
+Architecture behavioral of Entity seven is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <seven> in library <work> (architecture <behavioral>) with generics.
+	n = 2
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <seven> in library <work> (Architecture <behavioral>).
+	n = 2
+Entity <seven> analyzed. Unit <seven> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <seven>.
+    Related source file is "D:/FPGA/DEMNGAUNHIEN/DEMNGANHIEN.vhd".
+WARNING:Xst:1306 - Output <dp> is never assigned.
+WARNING:Xst:1306 - Output <a> is never assigned.
+WARNING:Xst:1306 - Output <b> is never assigned.
+WARNING:Xst:1306 - Output <c> is never assigned.
+WARNING:Xst:1306 - Output <d> is never assigned.
+WARNING:Xst:1306 - Output <e> is never assigned.
+WARNING:Xst:1306 - Output <f> is never assigned.
+WARNING:Xst:1306 - Output <g> is never assigned.
+WARNING:Xst:647 - Input <count> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <test> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <a_store> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <enable1>.
+    Found 1-bit register for signal <enable2>.
+    Found 1-bit register for signal <enable3>.
+    Found 8-bit register for signal <sevenSegment>.
+    Found 8-bit register for signal <d1>.
+    Found 8-bit register for signal <d2>.
+    Found 8-bit register for signal <d3>.
+    Found 32-bit up counter for signal <digit1>.
+    Found 21-bit adder for signal <digit1$add0000> created at line 142.
+    Found 32-bit adder for signal <digit1$add0001> created at line 148.
+    Found 21-bit comparator greater for signal <digit1$cmp_gt0000> created at line 143.
+    Found 21-bit comparator lessequal for signal <digit1$cmp_le0000> created at line 143.
+    Found 32-bit up counter for signal <digit2>.
+    Found 32-bit adder for signal <digit2$add0000> created at line 150.
+    Found 32-bit up counter for signal <digit3>.
+    Found 32-bit adder for signal <digit3$addsub0000> created at line 153.
+    Found 16-bit adder for signal <sevenSegment$add0000> created at line 117.
+    Found 16-bit comparator greater for signal <sevenSegment$cmp_gt0000> created at line 127.
+    Found 16-bit comparator greater for signal <sevenSegment$cmp_gt0001> created at line 122.
+    Found 16-bit comparator greater for signal <sevenSegment$cmp_gt0002> created at line 118.
+    Found 16-bit comparator lessequal for signal <sevenSegment$cmp_le0000> created at line 118.
+    Found 16-bit comparator less for signal <sevenSegment$cmp_lt0000> created at line 127.
+    Found 16-bit comparator less for signal <sevenSegment$cmp_lt0001> created at line 122.
+    Found 16-bit up counter for signal <tmp>.
+    Found 21-bit up counter for signal <tmp2>.
+    Summary:
+	inferred   5 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+Unit <seven> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 32-bit adder                                          : 3
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 21-bit up counter                                     : 1
+ 32-bit up counter                                     : 3
+# Registers                                            : 7
+ 1-bit register                                        : 3
+ 8-bit register                                        : 4
+# Comparators                                          : 8
+ 16-bit comparator greater                             : 3
+ 16-bit comparator less                                : 2
+ 16-bit comparator lessequal                           : 1
+ 21-bit comparator greater                             : 1
+ 21-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 21-bit adder                                          : 1
+ 32-bit adder                                          : 3
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 21-bit up counter                                     : 1
+ 32-bit up counter                                     : 3
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Comparators                                          : 8
+ 16-bit comparator greater                             : 3
+ 16-bit comparator less                                : 2
+ 16-bit comparator lessequal                           : 1
+ 21-bit comparator greater                             : 1
+ 21-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <seven> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block seven, actual ratio is 41.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 168
+ Flip-Flops                                            : 168
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : seven.ngr
+Top Level Output File Name         : seven
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 1072
+#      GND                         : 1
+#      INV                         : 26
+#      LUT1                        : 268
+#      LUT2                        : 21
+#      LUT3                        : 22
+#      LUT3_L                      : 1
+#      LUT4                        : 88
+#      LUT4_L                      : 1
+#      MUXCY                       : 363
+#      MUXF5                       : 14
+#      VCC                         : 1
+#      XORCY                       : 266
+# FlipFlops/Latches                : 168
+#      FD                          : 21
+#      FDC                         : 16
+#      FDE                         : 35
+#      FDRE                        : 96
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 1
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-4 
+
+ Number of Slices:                      287  out of    704    40%  
+ Number of Slice Flip Flops:            168  out of   1408    11%  
+ Number of 4 input LUTs:                427  out of   1408    30%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  13  out of    108    12%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+MCLK                               | BUFGP                  | 168   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+clear                              | IBUF                   | 16    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.104ns (Maximum Frequency: 76.311MHz)
+   Minimum input arrival time before clock: 3.936ns
+   Maximum output required time after clock: 5.531ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'MCLK'
+  Clock period: 13.104ns (frequency: 76.311MHz)
+  Total number of paths / destination ports: 266024 / 395
+-------------------------------------------------------------------------
+Delay:               13.104ns (Levels of Logic = 26)
+  Source:            tmp2_1 (FF)
+  Destination:       digit1_0 (FF)
+  Source Clock:      MCLK rising
+  Destination Clock: MCLK rising
+
+  Data Path: tmp2_1 to digit1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.590  tmp2_1 (tmp2_1)
+     LUT1:I0->O            1   0.648   0.000  Madd_digit1_add0000_cy<1>_rt (Madd_digit1_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  Madd_digit1_add0000_cy<1> (Madd_digit1_add0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<2> (Madd_digit1_add0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<3> (Madd_digit1_add0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<4> (Madd_digit1_add0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<5> (Madd_digit1_add0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<6> (Madd_digit1_add0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<7> (Madd_digit1_add0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<8> (Madd_digit1_add0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<9> (Madd_digit1_add0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<10> (Madd_digit1_add0000_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<11> (Madd_digit1_add0000_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<12> (Madd_digit1_add0000_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<13> (Madd_digit1_add0000_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<14> (Madd_digit1_add0000_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<15> (Madd_digit1_add0000_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<16> (Madd_digit1_add0000_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<17> (Madd_digit1_add0000_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_digit1_add0000_cy<18> (Madd_digit1_add0000_cy<18>)
+     MUXCY:CI->O           0   0.065   0.000  Madd_digit1_add0000_cy<19> (Madd_digit1_add0000_cy<19>)
+     XORCY:CI->O           3   0.844   0.534  Madd_digit1_add0000_xor<20> (digit1_add0000<20>)
+     LUT4:I3->O            1   0.648   0.000  digit1_cmp_eq0001_wg_lut<5> (digit1_cmp_eq0001_wg_lut<5>)
+     MUXCY:S->O           33   0.708   1.266  digit1_cmp_eq0001_wg_cy<5> (digit1_cmp_eq0001)
+     LUT4:I3->O            1   0.648   0.000  digit3_and000011_wg_lut<8> (digit3_and000011_wg_lut<8>)
+     MUXCY:S->O           36   0.708   1.343  digit3_and000011_wg_cy<8> (digit2_not0001)
+     LUT2:I1->O           32   0.643   1.262  digit3_and000011 (digit1_and0000)
+     FDRE:R                    0.869          digit1_0
+    ----------------------------------------
+    Total                     13.104ns (8.109ns logic, 4.995ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'MCLK'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.936ns (Levels of Logic = 2)
+  Source:            clear (PAD)
+  Destination:       sevenSegment_7 (FF)
+  Destination Clock: MCLK rising
+
+  Data Path: clear to sevenSegment_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   0.849   1.194  clear_IBUF (clear_IBUF)
+     LUT4:I0->O           11   0.648   0.933  sevenSegment_and0000 (sevenSegment_and0000)
+     FDE:CE                    0.312          sevenSegment_7
+    ----------------------------------------
+    Total                      3.936ns (1.809ns logic, 2.127ns route)
+                                       (46.0% logic, 54.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'MCLK'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 1)
+  Source:            enable1 (FF)
+  Destination:       enable1 (PAD)
+  Source Clock:      MCLK rising
+
+  Data Path: enable1 to enable1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  enable1 (enable1_OBUF)
+     OBUF:I->O                 4.520          enable1_OBUF (enable1)
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.48 secs
+ 
+--> 
+
+Total memory usage is 4513500 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

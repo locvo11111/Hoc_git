@@ -1,0 +1,22 @@
+
+# PlanAhead Generated physical constraints 
+
+
+
+# PlanAhead Generated IO constraints 
+
+
+
+# PlanAhead Generated physical constraints 
+
+NET "CK1HZ" LOC = P46;
+
+# PlanAhead Generated IO constraints 
+
+NET "CK1HZ" IOSTANDARD = LVTTL;
+
+# PlanAhead Generated physical constraints 
+
+
+NET "CKHT" LOC = P129;
+

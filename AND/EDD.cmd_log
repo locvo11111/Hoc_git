@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "D:/FPGA/AND/EDD.xst" -ofn "D:/FPGA/AND/EDD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDD.ucf -p xc3s50a-tq144-4 EDD.ngc EDD.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o EDD_map.ncd EDD.ngd EDD.pcf 
+par -w -intstyle ise -ol high -t 1 EDD_map.ncd EDD.ncd EDD.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EDD.twx EDD.ncd -o EDD.twr EDD.pcf -ucf EDD.ucf 
+bitgen -intstyle ise -f EDD.ut EDD.ncd 
+xst -intstyle ise -ifn "D:/FPGA/AND/EDD.xst" -ofn "D:/FPGA/AND/EDD.syr" 
+xst -intstyle ise -ifn "D:/FPGA/AND/EDD.xst" -ofn "D:/FPGA/AND/EDD.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc EDD.ucf -p xc3s50a-tq144-4 EDD.ngc EDD.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o EDD_map.ncd EDD.ngd EDD.pcf 
+par -w -intstyle ise -ol high -t 1 EDD_map.ncd EDD.ncd EDD.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml EDD.twx EDD.ncd -o EDD.twr EDD.pcf -ucf EDD.ucf 
+bitgen -intstyle ise -f EDD.ut EDD.ncd 

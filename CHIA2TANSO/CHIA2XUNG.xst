@@ -1,0 +1,5 @@
+set -tmpdir "D:/FPGA/CHIA2TANSO/xst/projnav.tmp"
+set -xsthdpdir "D:/FPGA/CHIA2TANSO/xst"
+elaborate
+-ifn CHIA2XUNG.prj
+-ifmt mixed

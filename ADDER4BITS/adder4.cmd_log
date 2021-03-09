@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/FPGA/ADDER4BITS/adder4.xst" -ofn "D:/FPGA/ADDER4BITS/adder4.syr" 
+xst -intstyle ise -ifn "D:/FPGA/ADDER4BITS/adder4.xst" -ofn "D:/FPGA/ADDER4BITS/adder4.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-4 adder4.ngc adder4.ngd  
+xst -intstyle ise -ifn "D:/FPGA/ADDER4BITS/adder4.xst" -ofn "D:/FPGA/ADDER4BITS/adder4.syr" 

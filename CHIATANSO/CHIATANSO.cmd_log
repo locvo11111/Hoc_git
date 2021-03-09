@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "D:/FPGA/CHIATANSO/CHIATANSO.xst" -ofn "D:/FPGA/CHIATANSO/CHIATANSO.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIATANSO.ucf -p xc3s50a-tq144-4 CHIATANSO.ngc CHIATANSO.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIATANSO_map.ncd CHIATANSO.ngd CHIATANSO.pcf 
+par -w -intstyle ise -ol high -t 1 CHIATANSO_map.ncd CHIATANSO.ncd CHIATANSO.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CHIATANSO.twx CHIATANSO.ncd -o CHIATANSO.twr CHIATANSO.pcf -ucf CHIATANSO.ucf 
+bitgen -intstyle ise -f CHIATANSO.ut CHIATANSO.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim CHIATANSO.ngd CHIATANSO_translate.v 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim CHIATANSO.ngc CHIATANSO_synthesis.v 
+xst -intstyle ise -ifn "D:/FPGA/CHIATANSO/CHIATANSO.xst" -ofn "D:/FPGA/CHIATANSO/CHIATANSO.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIATANSO.ucf -p xc3s50a-tq144-4 CHIATANSO.ngc CHIATANSO.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIATANSO_map.ncd CHIATANSO.ngd CHIATANSO.pcf 
+par -w -intstyle ise -ol high -t 1 CHIATANSO_map.ncd CHIATANSO.ncd CHIATANSO.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CHIATANSO.twx CHIATANSO.ncd -o CHIATANSO.twr CHIATANSO.pcf -ucf CHIATANSO.ucf 

@@ -1,0 +1,542 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\XIOLIN\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml CHIA2TANSO.twx CHIA2TANSO.ncd -o CHIA2TANSO.twr
+CHIA2TANSO.pcf -ucf CHIA2TANSO.ucf
+
+Design file:              CHIA2TANSO.ncd
+Physical constraint file: CHIA2TANSO.pcf
+Device,package,speed:     xc3s50a,tq144,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_CKHT = PERIOD TIMEGRP "CKHT" 12 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1752 paths analyzed, 164 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.913ns.
+--------------------------------------------------------------------------------
+
+Paths for end point CHIA2XUNG/D10_REG_18 (SLICE_X15Y10.SR), 24 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.420ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_8 (FF)
+  Destination:          CHIA2XUNG/D10_REG_18 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.868ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.045ns (0.030 - 0.075)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_8 to CHIA2XUNG/D10_REG_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y5.XQ       Tcko                  0.591   CHIA2XUNG/D10_REG<8>
+                                                       CHIA2XUNG/D10_REG_8
+    SLICE_X13Y8.F4       net (fanout=3)        1.303   CHIA2XUNG/D10_REG<8>
+    SLICE_X13Y8.COUT     Topcyf                1.195   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<0>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<0>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y10.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y10.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<18>
+                                                       CHIA2XUNG/D10_REG_18
+    -------------------------------------------------  ---------------------------
+    Total                                      5.868ns (2.913ns logic, 2.955ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_11 (FF)
+  Destination:          CHIA2XUNG/D10_REG_18 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.617ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.036ns (0.030 - 0.066)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_11 to CHIA2XUNG/D10_REG_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y6.YQ       Tcko                  0.580   CHIA2XUNG/D10_REG<10>
+                                                       CHIA2XUNG/D10_REG_11
+    SLICE_X13Y8.G1       net (fanout=3)        1.080   CHIA2XUNG/D10_REG<11>
+    SLICE_X13Y8.COUT     Topcyg                1.178   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y10.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y10.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<18>
+                                                       CHIA2XUNG/D10_REG_18
+    -------------------------------------------------  ---------------------------
+    Total                                      5.617ns (2.885ns logic, 2.732ns route)
+                                                       (51.4% logic, 48.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.805ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_3 (FF)
+  Destination:          CHIA2XUNG/D10_REG_18 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.477ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.051ns (0.030 - 0.081)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_3 to CHIA2XUNG/D10_REG_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y2.YQ       Tcko                  0.580   CHIA2XUNG/D10_REG<2>
+                                                       CHIA2XUNG/D10_REG_3
+    SLICE_X13Y8.G4       net (fanout=2)        0.940   CHIA2XUNG/D10_REG<3>
+    SLICE_X13Y8.COUT     Topcyg                1.178   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y10.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y10.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<18>
+                                                       CHIA2XUNG/D10_REG_18
+    -------------------------------------------------  ---------------------------
+    Total                                      5.477ns (2.885ns logic, 2.592ns route)
+                                                       (52.7% logic, 47.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CHIA2XUNG/D10_REG_19 (SLICE_X15Y10.SR), 24 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.420ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_8 (FF)
+  Destination:          CHIA2XUNG/D10_REG_19 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.868ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.045ns (0.030 - 0.075)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_8 to CHIA2XUNG/D10_REG_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y5.XQ       Tcko                  0.591   CHIA2XUNG/D10_REG<8>
+                                                       CHIA2XUNG/D10_REG_8
+    SLICE_X13Y8.F4       net (fanout=3)        1.303   CHIA2XUNG/D10_REG<8>
+    SLICE_X13Y8.COUT     Topcyf                1.195   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<0>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<0>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y10.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y10.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<18>
+                                                       CHIA2XUNG/D10_REG_19
+    -------------------------------------------------  ---------------------------
+    Total                                      5.868ns (2.913ns logic, 2.955ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_11 (FF)
+  Destination:          CHIA2XUNG/D10_REG_19 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.617ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.036ns (0.030 - 0.066)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_11 to CHIA2XUNG/D10_REG_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y6.YQ       Tcko                  0.580   CHIA2XUNG/D10_REG<10>
+                                                       CHIA2XUNG/D10_REG_11
+    SLICE_X13Y8.G1       net (fanout=3)        1.080   CHIA2XUNG/D10_REG<11>
+    SLICE_X13Y8.COUT     Topcyg                1.178   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y10.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y10.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<18>
+                                                       CHIA2XUNG/D10_REG_19
+    -------------------------------------------------  ---------------------------
+    Total                                      5.617ns (2.885ns logic, 2.732ns route)
+                                                       (51.4% logic, 48.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.805ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_3 (FF)
+  Destination:          CHIA2XUNG/D10_REG_19 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.477ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.051ns (0.030 - 0.081)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_3 to CHIA2XUNG/D10_REG_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y2.YQ       Tcko                  0.580   CHIA2XUNG/D10_REG<2>
+                                                       CHIA2XUNG/D10_REG_3
+    SLICE_X13Y8.G4       net (fanout=2)        0.940   CHIA2XUNG/D10_REG<3>
+    SLICE_X13Y8.COUT     Topcyg                1.178   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y10.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y10.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<18>
+                                                       CHIA2XUNG/D10_REG_19
+    -------------------------------------------------  ---------------------------
+    Total                                      5.477ns (2.885ns logic, 2.592ns route)
+                                                       (52.7% logic, 47.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CHIA2XUNG/D10_REG_20 (SLICE_X15Y11.SR), 24 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     77.420ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_8 (FF)
+  Destination:          CHIA2XUNG/D10_REG_20 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.868ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.045ns (0.030 - 0.075)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_8 to CHIA2XUNG/D10_REG_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y5.XQ       Tcko                  0.591   CHIA2XUNG/D10_REG<8>
+                                                       CHIA2XUNG/D10_REG_8
+    SLICE_X13Y8.F4       net (fanout=3)        1.303   CHIA2XUNG/D10_REG<8>
+    SLICE_X13Y8.COUT     Topcyf                1.195   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<0>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<0>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y11.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y11.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<20>
+                                                       CHIA2XUNG/D10_REG_20
+    -------------------------------------------------  ---------------------------
+    Total                                      5.868ns (2.913ns logic, 2.955ns route)
+                                                       (49.6% logic, 50.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.680ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_11 (FF)
+  Destination:          CHIA2XUNG/D10_REG_20 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.617ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.036ns (0.030 - 0.066)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_11 to CHIA2XUNG/D10_REG_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y6.YQ       Tcko                  0.580   CHIA2XUNG/D10_REG<10>
+                                                       CHIA2XUNG/D10_REG_11
+    SLICE_X13Y8.G1       net (fanout=3)        1.080   CHIA2XUNG/D10_REG<11>
+    SLICE_X13Y8.COUT     Topcyg                1.178   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y11.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y11.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<20>
+                                                       CHIA2XUNG/D10_REG_20
+    -------------------------------------------------  ---------------------------
+    Total                                      5.617ns (2.885ns logic, 2.732ns route)
+                                                       (51.4% logic, 48.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     77.805ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               CHIA2XUNG/D10_REG_3 (FF)
+  Destination:          CHIA2XUNG/D10_REG_20 (FF)
+  Requirement:          83.333ns
+  Data Path Delay:      5.477ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.051ns (0.030 - 0.081)
+  Source Clock:         CKHT_BUFGP falling at 41.666ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: CHIA2XUNG/D10_REG_3 to CHIA2XUNG/D10_REG_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y2.YQ       Tcko                  0.580   CHIA2XUNG/D10_REG<2>
+                                                       CHIA2XUNG/D10_REG_3
+    SLICE_X13Y8.G4       net (fanout=2)        0.940   CHIA2XUNG/D10_REG<3>
+    SLICE_X13Y8.COUT     Topcyg                1.178   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_lut<1>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.CIN      net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<1>
+    SLICE_X13Y9.COUT     Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<2>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.CIN     net (fanout=1)        0.000   CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<3>
+    SLICE_X13Y10.COUT    Tbyp                  0.130   CHIA2XUNG/D10_NEXT_cmp_eq0000
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<4>
+                                                       CHIA2XUNG/D10_NEXT_cmp_eq0000_wg_cy<5>
+    SLICE_X15Y11.SR      net (fanout=12)       1.652   CHIA2XUNG/D10_NEXT_cmp_eq0000
+    SLICE_X15Y11.CLK     Tsrck                 0.867   CHIA2XUNG/D10_REG<20>
+                                                       CHIA2XUNG/D10_REG_20
+    -------------------------------------------------  ---------------------------
+    Total                                      5.477ns (2.885ns logic, 2.592ns route)
+                                                       (52.7% logic, 47.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CKHT = PERIOD TIMEGRP "CKHT" 12 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point CHIA2XUNG/D1_REG_2 (SLICE_X9Y9.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.626ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CHIA2XUNG/D1_REG_2 (FF)
+  Destination:          CHIA2XUNG/D1_REG_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.626ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CKHT_BUFGP falling at 124.999ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: CHIA2XUNG/D1_REG_2 to CHIA2XUNG/D1_REG_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y9.XQ        Tcko                  0.473   CHIA2XUNG/D1_REG<2>
+                                                       CHIA2XUNG/D1_REG_2
+    SLICE_X9Y9.F4        net (fanout=2)        0.306   CHIA2XUNG/D1_REG<2>
+    SLICE_X9Y9.CLK       Tckf        (-Th)    -0.847   CHIA2XUNG/D1_REG<2>
+                                                       CHIA2XUNG/D1_REG<2>_rt
+                                                       CHIA2XUNG/Madd_D1_NEXT_addsub0000_xor<2>
+                                                       CHIA2XUNG/D1_REG_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.626ns (1.320ns logic, 0.306ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CHIA2XUNG/D1_REG_6 (SLICE_X9Y11.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.626ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CHIA2XUNG/D1_REG_6 (FF)
+  Destination:          CHIA2XUNG/D1_REG_6 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.626ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CKHT_BUFGP falling at 124.999ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: CHIA2XUNG/D1_REG_6 to CHIA2XUNG/D1_REG_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y11.XQ       Tcko                  0.473   CHIA2XUNG/D1_REG<6>
+                                                       CHIA2XUNG/D1_REG_6
+    SLICE_X9Y11.F4       net (fanout=2)        0.306   CHIA2XUNG/D1_REG<6>
+    SLICE_X9Y11.CLK      Tckf        (-Th)    -0.847   CHIA2XUNG/D1_REG<6>
+                                                       CHIA2XUNG/D1_REG<6>_rt
+                                                       CHIA2XUNG/Madd_D1_NEXT_addsub0000_xor<6>
+                                                       CHIA2XUNG/D1_REG_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.626ns (1.320ns logic, 0.306ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CHIA2XUNG/D1_REG_18 (SLICE_X9Y17.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.626ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               CHIA2XUNG/D1_REG_18 (FF)
+  Destination:          CHIA2XUNG/D1_REG_18 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.626ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CKHT_BUFGP falling at 124.999ns
+  Destination Clock:    CKHT_BUFGP falling at 124.999ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: CHIA2XUNG/D1_REG_18 to CHIA2XUNG/D1_REG_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y17.XQ       Tcko                  0.473   CHIA2XUNG/D1_REG<18>
+                                                       CHIA2XUNG/D1_REG_18
+    SLICE_X9Y17.F4       net (fanout=3)        0.306   CHIA2XUNG/D1_REG<18>
+    SLICE_X9Y17.CLK      Tckf        (-Th)    -0.847   CHIA2XUNG/D1_REG<18>
+                                                       CHIA2XUNG/D1_REG<18>_rt
+                                                       CHIA2XUNG/Madd_D1_NEXT_addsub0000_xor<18>
+                                                       CHIA2XUNG/D1_REG_18
+    -------------------------------------------------  ---------------------------
+    Total                                      1.626ns (1.320ns logic, 0.306ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CKHT = PERIOD TIMEGRP "CKHT" 12 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 81.851ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.741ns (Tcl)
+  Physical resource: CHIA2XUNG/D1_REG<0>/CLK
+  Logical resource: CHIA2XUNG/D1_REG_0/CK
+  Location pin: SLICE_X9Y8.CLK
+  Clock network: CKHT_BUFGP
+--------------------------------------------------------------------------------
+Slack: 81.851ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 83.333ns
+  High pulse: 41.666ns
+  High pulse limit: 0.741ns (Tch)
+  Physical resource: CHIA2XUNG/D1_REG<0>/CLK
+  Logical resource: CHIA2XUNG/D1_REG_0/CK
+  Location pin: SLICE_X9Y8.CLK
+  Clock network: CKHT_BUFGP
+--------------------------------------------------------------------------------
+Slack: 81.851ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 0.741ns (Tcl)
+  Physical resource: CHIA2XUNG/D1_REG<0>/CLK
+  Logical resource: CHIA2XUNG/D1_REG_1/CK
+  Location pin: SLICE_X9Y8.CLK
+  Clock network: CKHT_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CKHT
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CKHT           |         |         |         |    5.913|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1752 paths, 0 nets, and 171 connections
+
+Design statistics:
+   Minimum period:   5.913ns{1}   (Maximum frequency: 169.119MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Oct 04 12:45:31 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4522 MB
+
+
+

@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "D:/FPGA/CHIA2TANSO/CHIA2TANSO.xst" -ofn "D:/FPGA/CHIA2TANSO/CHIA2TANSO.syr" 
+xst -intstyle ise -ifn "D:/FPGA/CHIA2TANSO/CHIA2TANSO.xst" -ofn "D:/FPGA/CHIA2TANSO/CHIA2TANSO.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50a-tq144-4 CHIA2TANSO.ngc CHIA2TANSO.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIA2TANSO_map.ncd CHIA2TANSO.ngd CHIA2TANSO.pcf 
+par -w -intstyle ise -ol high -t 1 CHIA2TANSO_map.ncd CHIA2TANSO.ncd CHIA2TANSO.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CHIA2TANSO.twx CHIA2TANSO.ncd -o CHIA2TANSO.twr CHIA2TANSO.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIA2TANSO.ucf -p xc3s50a-tq144-4 CHIA2TANSO.ngc CHIA2TANSO.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIA2TANSO.ucf -p xc3s50a-tq144-4 CHIA2TANSO.ngc CHIA2TANSO.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIA2TANSO.ucf -p xc3s50a-tq144-4 CHIA2TANSO.ngc CHIA2TANSO.ngd  
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim CHIA2TANSO.ngc CHIA2TANSO_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIA2TANSO.ucf -p xc3s50a-tq144-4 CHIA2TANSO.ngc CHIA2TANSO.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc CHIA2TANSO.ucf -p xc3s50a-tq144-4 CHIA2TANSO.ngc CHIA2TANSO.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o CHIA2TANSO_map.ncd CHIA2TANSO.ngd CHIA2TANSO.pcf 
+par -w -intstyle ise -ol high -t 1 CHIA2TANSO_map.ncd CHIA2TANSO.ncd CHIA2TANSO.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CHIA2TANSO.twx CHIA2TANSO.ncd -o CHIA2TANSO.twr CHIA2TANSO.pcf -ucf CHIA2TANSO.ucf 
+bitgen -intstyle ise -f CHIA2TANSO.ut CHIA2TANSO.ncd 

@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Oct 12 09:57:44 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CKHT" LOCATE = SITE "P129" LEVEL 1;
+COMP "ENA1HZ" LOCATE = SITE "P46" LEVEL 1;
+COMP "CK1HZ" LOCATE = SITE "P47" LEVEL 1;
+TIMEGRP clk = BEL "D1_REG_0" BEL "D1_REG_1" BEL "D1_REG_2" BEL "D1_REG_3" BEL
+        "D1_REG_4" BEL "D1_REG_5" BEL "D1_REG_6" BEL "D1_REG_7" BEL "D1_REG_8"
+        BEL "D1_REG_9" BEL "D1_REG_10" BEL "D1_REG_11" BEL "D1_REG_12" BEL
+        "D1_REG_13" BEL "D1_REG_14" BEL "D1_REG_15" BEL "D1_REG_16" BEL
+        "D1_REG_17" BEL "D1_REG_18" BEL "D1_REG_19" BEL "D1_REG_20" BEL
+        "D1_REG_21" BEL "D1_REG_22" BEL "D1_REG_23" BEL
+        "CKHT_BUFGP/BUFG.GCLKMUX" BEL "CKHT_BUFGP/BUFG";
+SCHEMATIC END;
+

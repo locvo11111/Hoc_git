@@ -1,0 +1,379 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: CHIATANSO.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CHIATANSO.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CHIATANSO"
+Output Format                      : NGC
+Target Device                      : xc3s50a-4-tq144
+
+---- Source Options
+Top Module Name                    : CHIATANSO
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/FPGA/CHIATANSO/CHIAXUNG.vhd" in Library work.
+WARNING:HDLParsers:1406 - "D:/FPGA/CHIATANSO/CHIAXUNG.vhd" Line 42. No sensitivity list and no wait in the process
+Architecture behavioral of Entity chiaxung is up to date.
+Compiling vhdl file "D:/FPGA/CHIATANSO/CHIATANSO.vhd" in Library work.
+Architecture behavioral of Entity chiatanso is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CHIATANSO> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <CHIAXUNG> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CHIATANSO> in library <work> (Architecture <behavioral>).
+Entity <CHIATANSO> analyzed. Unit <CHIATANSO> generated.
+
+Analyzing Entity <CHIAXUNG> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:819 - "D:/FPGA/CHIATANSO/CHIAXUNG.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <CKHT>
+Entity <CHIAXUNG> analyzed. Unit <CHIAXUNG> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <CHIAXUNG>.
+    Related source file is "D:/FPGA/CHIATANSO/CHIAXUNG.vhd".
+    Found 24-bit comparator less for signal <CK1HZ$cmp_lt0000> created at line 49.
+    Found 24-bit adder for signal <D1_NEXT$addsub0000> created at line 47.
+    Found 24-bit register for signal <D1_REG>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <CHIAXUNG> synthesized.
+
+
+Synthesizing Unit <CHIATANSO>.
+    Related source file is "D:/FPGA/CHIATANSO/CHIATANSO.vhd".
+Unit <CHIATANSO> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 24-bit adder                                          : 1
+# Registers                                            : 1
+ 24-bit register                                       : 1
+# Comparators                                          : 1
+ 24-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 24-bit adder                                          : 1
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+# Comparators                                          : 1
+ 24-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CHIATANSO> ...
+
+Optimizing unit <CHIAXUNG> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CHIATANSO, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CHIATANSO.ngr
+Top Level Output File Name         : CHIATANSO
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 2
+
+Cell Usage :
+# BELS                             : 106
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 24
+#      LUT2                        : 3
+#      LUT3                        : 2
+#      LUT4                        : 6
+#      MUXCY                       : 39
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 24
+#      FDR_1                       : 23
+#      FDS_1                       : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-4 
+
+ Number of Slices:                       21  out of    704     2%  
+ Number of Slice Flip Flops:             24  out of   1408     1%  
+ Number of 4 input LUTs:                 41  out of   1408     2%  
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    108     1%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CKHT                               | BUFGP                  | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.983ns (Maximum Frequency: 200.682MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 9.342ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CKHT'
+  Clock period: 4.983ns (frequency: 200.682MHz)
+  Total number of paths / destination ports: 876 / 48
+-------------------------------------------------------------------------
+Delay:               4.983ns (Levels of Logic = 7)
+  Source:            CHIAXUNG/D1_REG_4 (FF)
+  Destination:       CHIAXUNG/D1_REG_23 (FF)
+  Source Clock:      CKHT falling
+  Destination Clock: CKHT falling
+
+  Data Path: CHIAXUNG/D1_REG_4 to CHIAXUNG/D1_REG_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q            2   0.591   0.590  CHIAXUNG/D1_REG_4 (CHIAXUNG/D1_REG_4)
+     LUT4:I0->O            1   0.648   0.000  CHIAXUNG/D1_NEXT_cmp_eq0000_wg_lut<0> (CHIAXUNG/D1_NEXT_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<0> (CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<1> (CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<2> (CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<3> (CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<4> (CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          24   0.141   1.252  CHIAXUNG/D1_NEXT_cmp_eq0000_wg_cy<5> (CHIAXUNG/D1_NEXT_cmp_eq0000)
+     FDR_1:R                   0.869          CHIAXUNG/D1_REG_23
+    ----------------------------------------
+    Total                      4.983ns (3.141ns logic, 1.842ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CKHT'
+  Total number of paths / destination ports: 17 / 1
+-------------------------------------------------------------------------
+Offset:              9.342ns (Levels of Logic = 13)
+  Source:            CHIAXUNG/D1_REG_7 (FF)
+  Destination:       LED (PAD)
+  Source Clock:      CKHT falling
+
+  Data Path: CHIAXUNG/D1_REG_7 to LED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q            3   0.591   0.674  CHIAXUNG/D1_REG_7 (CHIAXUNG/D1_REG_7)
+     LUT2:I0->O            1   0.648   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_lut<0> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<0> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<1> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<2> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<3> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<4> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<5> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<6> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<7> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<8> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.269   0.420  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<9> (CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<9>)
+     INV:I->O              1   0.648   0.420  CHIAXUNG/Mcompar_CK1HZ_cmp_lt0000_cy<9>_inv_INV_0 (LED_OBUF)
+     OBUF:I->O                 4.520          LED_OBUF (LED)
+    ----------------------------------------
+    Total                      9.342ns (7.828ns logic, 1.514ns route)
+                                       (83.8% logic, 16.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.48 secs
+ 
+--> 
+
+Total memory usage is 4513484 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

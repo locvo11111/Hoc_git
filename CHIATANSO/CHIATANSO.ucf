@@ -1,0 +1,20 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "LED" LOC = P46;
+
+# PlanAhead Generated IO constraints 
+
+NET "LED" IOSTANDARD = LVTTL;
+NET "LED" DRIVE = 12;
+
+# PlanAhead Generated physical constraints 
+
+
+
+# PlanAhead Generated IO constraints 
+
+
+NET "CKHT" LOC = P129;
+NET "CKHT" TNM_NET=clk;
+TIMESPEC TS_CKHT= PERIOD "CKHT" 12 MHZ HIGH 50%;

@@ -1,0 +1,13 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "CK1HZ" LOC = P47;
+
+NET "ENA1HZ" LOC = P46;
+
+# PlanAhead Generated IO constraints 
+
+NET "ENA1HZ" IOSTANDARD = LVCMOS25;
+NET "CKHT" LOC = P129;
+NET "CKHT" TNM_NET=clk;
+TIMESPEC TS_CKHT= PERIOD "CKHT" 12 MHZ HIGH 50%;

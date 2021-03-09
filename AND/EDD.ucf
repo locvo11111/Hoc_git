@@ -1,0 +1,19 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "a" LOC = P70;
+NET "b" LOC = P69;
+NET "cin" LOC = P68;
+NET "count" LOC = P47;
+NET "s" LOC = P46;
+
+# PlanAhead Generated IO constraints 
+
+NET "a" IOSTANDARD = LVTTL;
+NET "b" IOSTANDARD = LVTTL;
+NET "cin" IOSTANDARD = LVTTL;
+NET "a" PULLUP;
+NET "b" PULLUP;
+NET "cin" PULLUP;
+NET "count" DRIVE = 8;
+NET "s" DRIVE = 8;
