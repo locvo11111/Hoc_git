@@ -1,0 +1,5 @@
+set -tmpdir "D:/FPGA/LED7/xst/projnav.tmp"
+set -xsthdpdir "D:/FPGA/LED7/xst"
+elaborate
+-ifn Giaima.prj
+-ifmt mixed

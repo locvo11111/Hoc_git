@@ -1,0 +1,108 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Oct 02 09:00:46 2020
+# Process ID: 16056
+# Log file: D:/FPGA/LED7DOAN/planAhead_run_2/planAhead.log
+# Journal file: D:/FPGA/LED7DOAN/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/XIOLIN/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/XIOLIN/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/XIOLIN/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/FPGA/LED7DOAN/pa.fromHdl.tcl
+# create_project -name LED7DOAN -dir "D:/FPGA/LED7DOAN/planAhead_run_2" -part xc3s50atq144-4
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "LED7DOAN.ucf" [current_fileset -constrset]
+Adding file 'D:/FPGA/LED7DOAN/LED7DOAN.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {LED7DOAN.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top LED7DOAN $srcset
+# add_files [list {LED7DOAN.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s50atq144-4
+Using Verific elaboration
+Parsing VHDL file "D:/XIOLIN/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/XIOLIN/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/FPGA/LED7DOAN/LED7DOAN.vhd" into library work
+INFO: [Designutils 20-910] Reading macro library D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn
+Parsing EDIF File [D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Finished Parsing EDIF File [D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Loading clock regions from D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/ClockRegion.xml
+Loading clock buffers from D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/ClockBuffers.xml
+Loading package from D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/tq144/Package.xml
+Loading io standards from D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/tq144/SSORules.xml
+Loading list of drcs for the architecture : D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/drc.xml
+INFO: [Timing 38-77] Reading timing library D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-4.lib.
+INFO: [Timing 38-34] Done reading timing library D:/XIOLIN/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-4.lib.
+Parsing UCF File [D:/FPGA/LED7DOAN/LED7DOAN.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[0]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:78]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[0]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:78]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[0]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:78]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[0]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:78]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[1]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:79]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[1]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:79]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[1]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:79]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[1]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:79]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[1]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:79]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[2]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:80]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[2]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:80]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[2]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:80]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[2]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:80]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[3]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:81]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[3]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:81]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[3]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:81]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[3]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:81]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[4]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:82]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[4]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:82]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[4]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:82]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[4]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:82]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[5]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:83]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[5]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:83]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[5]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:83]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[5]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:83]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[6]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:84]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[6]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:84]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[6]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:84]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[6]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:84]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[7]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:85]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[7]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:85]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[7]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:85]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[7]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:85]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'IO_P5[7]' [D:/FPGA/LED7DOAN/LED7DOAN.ucf:85]
+Finished Parsing UCF File [D:/FPGA/LED7DOAN/LED7DOAN.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: b33105a2
+update_compile_order -fileset sim_1
+set_property is_loc_fixed false [get_ports [list  clk]]
+set_property is_loc_fixed true [get_ports [list  clk]]
+set_property is_loc_fixed false [get_ports [list  clk]]
+set_property is_loc_fixed true [get_ports [list  clk]]
+set_property package_pin "" [get_ports [list  {IO_P5_i[1]}]]
+startgroup
+set_property package_pin P125 [get_ports {IO_P5_i[0]}]
+endgroup
+startgroup
+set_property package_pin P123 [get_ports {IO_P5_i[1]}]
+endgroup
+set_property pulltype PULLUP [get_ports [list {IO_P5_i[1]}]]
+set_property iostandard LVCMOS33 [get_ports [list {IO_P5_i[1]}]]
+set_property iostandard LVCMOS33 [get_ports [list {IO_P5_i[0]}]]
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See D:/FPGA/LED7DOAN\planAhead_pid16056.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Oct 02 09:06:10 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "D:/FPGA/LED7DOAN/LED7DOAN.xst" -ofn "D:/FPGA/LED7DOAN/LED7DOAN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LED7DOAN.ucf -p xc3s50a-tq144-4 LED7DOAN.ngc LED7DOAN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LED7DOAN.ucf -p xc3s50a-tq144-4 LED7DOAN.ngc LED7DOAN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LED7DOAN.ucf -p xc3s50a-tq144-4 LED7DOAN.ngc LED7DOAN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LED7DOAN.ucf -p xc3s50a-tq144-4 LED7DOAN.ngc LED7DOAN.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LED7DOAN.ucf -p xc3s50a-tq144-4 LED7DOAN.ngc LED7DOAN.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o LED7DOAN_map.ncd LED7DOAN.ngd LED7DOAN.pcf 
+par -w -intstyle ise -ol high -t 1 LED7DOAN_map.ncd LED7DOAN.ncd LED7DOAN.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LED7DOAN.twx LED7DOAN.ncd -o LED7DOAN.twr LED7DOAN.pcf -ucf LED7DOAN.ucf 
+bitgen -intstyle ise -f LED7DOAN.ut LED7DOAN.ncd 
+xst -intstyle ise -ifn "D:/FPGA/LED7DOAN/LED7DOAN.xst" -ofn "D:/FPGA/LED7DOAN/LED7DOAN.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc LED7DOAN.ucf -p xc3s50a-tq144-4 LED7DOAN.ngc LED7DOAN.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o LED7DOAN_map.ncd LED7DOAN.ngd LED7DOAN.pcf 
+par -w -intstyle ise -ol high -t 1 LED7DOAN_map.ncd LED7DOAN.ncd LED7DOAN.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml LED7DOAN.twx LED7DOAN.ncd -o LED7DOAN.twr LED7DOAN.pcf -ucf LED7DOAN.ucf 
+bitgen -intstyle ise -f LED7DOAN.ut LED7DOAN.ncd 

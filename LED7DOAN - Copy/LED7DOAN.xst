@@ -1,0 +1,5 @@
+set -tmpdir "D:/FPGA/LED7DOAN/xst/projnav.tmp"
+set -xsthdpdir "D:/FPGA/LED7DOAN/xst"
+elaborate
+-ifn LED7DOAN.prj
+-ifmt mixed

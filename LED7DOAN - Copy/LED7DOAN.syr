@@ -1,0 +1,466 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: LED7DOAN.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LED7DOAN.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LED7DOAN"
+Output Format                      : NGC
+Target Device                      : xc3s50a-4-tq144
+
+---- Source Options
+Top Module Name                    : LED7DOAN
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/FPGA/LED7DOAN/LED7DOAN.vhd" in Library work.
+Architecture behavioral of Entity led7doan is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <LED7DOAN> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <LED7DOAN> in library <work> (Architecture <behavioral>).
+Entity <LED7DOAN> analyzed. Unit <LED7DOAN> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <LED7DOAN>.
+    Related source file is "D:/FPGA/LED7DOAN/LED7DOAN.vhd".
+WARNING:Xst:1780 - Signal <state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 16x8-bit ROM for signal <SevenSegment$mux0001>.
+    Found 8-bit register for signal <SevenSegment>.
+    Found 3-bit register for signal <Enable>.
+    Found 32-bit register for signal <bcd>.
+    Found 32-bit adder for signal <bcd$addsub0000> created at line 69.
+    Found 1-bit register for signal <clk_i>.
+    Found 28-bit up counter for signal <counter>.
+    Found 3-bit register for signal <En>.
+    Found 32-bit up counter for signal <i>.
+    Found 8-bit register for signal <SevenSegment_O>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  55 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <LED7DOAN> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 2
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 6
+ 1-bit register                                        : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 1
+ 8-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <LED7DOAN>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_SevenSegment_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <LED7DOAN> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 2
+ 28-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_7> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_7> 
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_6> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_6> 
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_5> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_5> 
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_4> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_4> 
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_1> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_1> 
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_0> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_0> 
+WARNING:Xst:2677 - Node <counter_19> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_20> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_21> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_22> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_23> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_24> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_25> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_26> of sequential type is unconnected in block <LED7DOAN>.
+WARNING:Xst:2677 - Node <counter_27> of sequential type is unconnected in block <LED7DOAN>.
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_3> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_3> 
+INFO:Xst:2261 - The FF/Latch <SevenSegment_O_2> in Unit <LED7DOAN> is equivalent to the following FF/Latch, which will be removed : <SevenSegment_2> 
+
+Optimizing unit <LED7DOAN> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LED7DOAN, actual ratio is 15.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 98
+ Flip-Flops                                            : 98
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : LED7DOAN.ngr
+Top Level Output File Name         : LED7DOAN
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 22
+
+Cell Usage :
+# BELS                             : 367
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 80
+#      LUT2                        : 37
+#      LUT2_L                      : 2
+#      LUT3                        : 14
+#      LUT4                        : 44
+#      LUT4_L                      : 1
+#      MUXCY                       : 95
+#      MUXF5                       : 6
+#      VCC                         : 1
+#      XORCY                       : 83
+# FlipFlops/Latches                : 98
+#      FD                          : 26
+#      FDE                         : 32
+#      FDRE                        : 32
+#      FDS                         : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 10
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-4 
+
+ Number of Slices:                       97  out of    704    13%  
+ Number of Slice Flip Flops:             98  out of   1408     6%  
+ Number of 4 input LUTs:                181  out of   1408    12%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    108    20%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 20    |
+clk_i1                             | BUFG                   | 78    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.237ns (Maximum Frequency: 138.178MHz)
+   Minimum input arrival time before clock: 11.851ns
+   Maximum output required time after clock: 5.558ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.570ns (frequency: 218.818MHz)
+  Total number of paths / destination ports: 191 / 20
+-------------------------------------------------------------------------
+Delay:               4.570ns (Levels of Logic = 19)
+  Source:            counter_1 (FF)
+  Destination:       counter_18 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: counter_1 to counter_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.591   0.563  counter_1 (counter_1)
+     LUT1:I0->O            1   0.648   0.000  Mcount_counter_cy<1>_rt (Mcount_counter_cy<1>_rt)
+     MUXCY:S->O            1   0.632   0.000  Mcount_counter_cy<1> (Mcount_counter_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<2> (Mcount_counter_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<3> (Mcount_counter_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<4> (Mcount_counter_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<5> (Mcount_counter_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<6> (Mcount_counter_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<7> (Mcount_counter_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<8> (Mcount_counter_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<9> (Mcount_counter_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<10> (Mcount_counter_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<11> (Mcount_counter_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<12> (Mcount_counter_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<13> (Mcount_counter_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<14> (Mcount_counter_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<15> (Mcount_counter_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  Mcount_counter_cy<16> (Mcount_counter_cy<16>)
+     MUXCY:CI->O           0   0.065   0.000  Mcount_counter_cy<17> (Mcount_counter_cy<17>)
+     XORCY:CI->O           1   0.844   0.000  Mcount_counter_xor<18> (Result<18>)
+     FD:D                      0.252          counter_18
+    ----------------------------------------
+    Total                      4.570ns (4.007ns logic, 0.563ns route)
+                                       (87.7% logic, 12.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_i1'
+  Clock period: 7.237ns (frequency: 138.178MHz)
+  Total number of paths / destination ports: 5433 / 150
+-------------------------------------------------------------------------
+Delay:               7.237ns (Levels of Logic = 10)
+  Source:            i_8 (FF)
+  Destination:       i_0 (FF)
+  Source Clock:      clk_i1 rising
+  Destination Clock: clk_i1 rising
+
+  Data Path: i_8 to i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.591   0.590  i_8 (i_8)
+     LUT4:I0->O            1   0.648   0.000  bcd_cmp_eq0000_wg_lut<0> (bcd_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  bcd_cmp_eq0000_wg_cy<0> (bcd_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  bcd_cmp_eq0000_wg_cy<1> (bcd_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  bcd_cmp_eq0000_wg_cy<2> (bcd_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  bcd_cmp_eq0000_wg_cy<3> (bcd_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  bcd_cmp_eq0000_wg_cy<4> (bcd_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  bcd_cmp_eq0000_wg_cy<5> (bcd_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  bcd_cmp_eq0000_wg_cy<6> (bcd_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          34   0.269   1.343  bcd_cmp_eq0000_wg_cy<7> (bcd_cmp_eq0000)
+     LUT2:I1->O           32   0.643   1.262  i_and00001 (i_and0000)
+     FDRE:R                    0.869          i_0
+    ----------------------------------------
+    Total                      7.237ns (4.042ns logic, 3.195ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i1'
+  Total number of paths / destination ports: 1294 / 115
+-------------------------------------------------------------------------
+Offset:              11.851ns (Levels of Logic = 8)
+  Source:            DPSwitch<6> (PAD)
+  Destination:       SevenSegment_O_2 (FF)
+  Destination Clock: clk_i1 rising
+
+  Data Path: DPSwitch<6> to SevenSegment_O_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.849   0.900  DPSwitch_6_IBUF (DPSwitch_6_IBUF)
+     LUT3:I0->O            3   0.648   0.563  SevenSegment_O_mux0001<3>71 (N27)
+     LUT3:I2->O            4   0.648   0.590  SevenSegment_O_mux0001<0>22 (N13)
+     LUT4:I3->O           47   0.648   1.270  i_cmp_eq00001 (i_cmp_eq0000)
+     LUT4:I3->O            4   0.648   0.590  SevenSegment_O_mux0001<3>41 (N12)
+     LUT4:I3->O            3   0.648   0.674  SevenSegment_O_mux0001<4>211 (N28)
+     LUT3:I0->O            1   0.648   0.563  SevenSegment_O_mux0001<4>2_SW0 (N37)
+     LUT4:I0->O            2   0.648   0.447  SevenSegment_O_mux0001<4>2 (N4)
+     FDS:S                     0.869          SevenSegment_O_2
+    ----------------------------------------
+    Total                     11.851ns (6.254ns logic, 5.597ns route)
+                                       (52.8% logic, 47.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i1'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              5.558ns (Levels of Logic = 1)
+  Source:            SevenSegment_O_7 (FF)
+  Destination:       SevenSegment<7> (PAD)
+  Source Clock:      clk_i1 rising
+
+  Data Path: SevenSegment_O_7 to SevenSegment<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              2   0.591   0.447  SevenSegment_O_7 (SevenSegment_O_7)
+     OBUF:I->O                 4.520          SevenSegment_7_OBUF (SevenSegment<7>)
+    ----------------------------------------
+    Total                      5.558ns (5.111ns logic, 0.447ns route)
+                                       (92.0% logic, 8.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.86 secs
+ 
+--> 
+
+Total memory usage is 4513500 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/FPGA/LED7/LED7.xst" -ofn "D:/FPGA/LED7/LED7.syr" 
+xst -intstyle ise -ifn "D:/FPGA/LED7/LED7.xst" -ofn "D:/FPGA/LED7/LED7.syr" 
+xst -intstyle ise -ifn "D:/FPGA/LED7/LED7.xst" -ofn "D:/FPGA/LED7/LED7.syr" 
+xst -intstyle ise -ifn "D:/FPGA/LED7/LED7.xst" -ofn "D:/FPGA/LED7/LED7.syr" 
